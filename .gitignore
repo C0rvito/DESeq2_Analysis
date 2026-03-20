@@ -1,0 +1,12 @@
+data/raw/GDCdata/
+data/processed/counts_aligned_LUAD.tsv
+data/processed/meta_aligned_LUAD.tsv
+data/processed/meta_filtrada_LUAD.tsv
+results/DE_WGD_1_2_vs_0_LUAD.tsv
+results/NormCounts_WGD_1_2_vs_0_LUAD.tsv
+.Rhistory
+.RData
+.Rproj.user/
+renv/library/
+renv/staging/
+renv/python/
