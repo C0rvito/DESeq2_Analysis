@@ -9,7 +9,7 @@ dir.create("data/raw", recursive = TRUE, showWarnings = FALSE)
 dir.create("data/processed", recursive = TRUE, showWarnings = FALSE)
 dir.create("results", recursive = TRUE, showWarnings = FALSE)
 
-# 2. CARREGAR O MOTOR DO PIPELINE
+# 2. CARREGAR A FUNÇÃO DE ANÁLISE DEseq PARA DUPLICAÇÃO DE GENOMA
 source("src/wdg_pipeline.R")
 
 # 3. DEFINIR A LISTA DE TUMORES ALVO
@@ -21,8 +21,7 @@ cat("Iniciando orquestração do pipeline para", length(cancer_targets), "tipos 
 
 for (cancer in cancer_targets) {
   
-  # O bloco tryCatch isola falhas. Se LUAD falhar por falta de amostras,
-  # o script não quebra; ele apenas registra o erro e passa para o BRCA.
+  # O bloco tryCatch isola falhas. Se algum câncer buscado falhar a função só passará para o outro tipo de câncer.
   tryCatch({
     
     run_wgd_analysis(target_cancer = cancer, 

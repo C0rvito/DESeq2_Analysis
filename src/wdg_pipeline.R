@@ -1,8 +1,7 @@
-# =========================================================================
+# =======================================================================================
 # File: src/wgd_pipeline.R
-# Description: Módulo de processamento (Worker) para análise de expressão
-# diferencial (WGD) no TCGA. Executa o pipeline para um único tipo de câncer.
-# =========================================================================
+# Description: Módulo de processamento moldado a partir do pipeline RUN_DE_v2.r do Mateus
+# ======================================================================================
 
 # Carregamento de dependências
 suppressPackageStartupMessages({
